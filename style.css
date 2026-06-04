@@ -15,41 +15,85 @@ color:#2d2d2d;
 /* HERO SECTION */
 
 .hero{
-height:420px;
+
+height:700px;
+
+background:
+linear-gradient(
+rgba(255,245,242,0.50),
+rgba(255,245,242,0.55)
+),
+url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1800');
+
+background-size:cover;
+background-position:center;
+
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
+}
+
+.hero-overlay{
+
+backdrop-filter:blur(4px);
 
 background:
-linear-gradient(
-rgba(255,248,245,0.85),
-rgba(255,248,245,0.85)
-),
-url('https://images.unsplash.com/photo-1612423284934-2850a4ea6b0f?auto=format&fit=crop&w=1600&q=80');
+rgba(255,255,255,0.12);
 
-background-size:cover;
-background-position:center;
+padding:60px;
+
+border-radius:30px;
+
+animation:fadeIn 1.4s ease;
+}
+
+.hero-small{
+
+letter-spacing:4px;
+text-transform:uppercase;
+font-size:15px;
+margin-bottom:20px;
+color:#694747;
 }
 
 .hero h1{
+
+font-size:88px;
 font-family:
-'Cormorant Garamond',
+'Playfair Display',
 serif;
 
-font-size:72px;
-font-weight:700;
-
-color:#7f5858;
+color:#6d4c4c;
 margin-bottom:15px;
 }
 
-.hero p{
-font-size:22px;
-letter-spacing:1px;
-color:#4b4b4b;
+.hero-tagline{
+font-size:24px;
+margin-bottom:35px;
+}
+
+.shop-btn{
+
+display:inline-block;
+
+padding:18px 45px;
+
+background:#b67b83;
+color:white;
+
+border-radius:50px;
+text-decoration:none;
+
+font-size:18px;
+font-weight:600;
+
+transition:0.3s;
+}
+
+.shop-btn:hover{
+transform:translateY(-3px);
 }
 
 /* FILTER SECTION */
@@ -345,4 +389,98 @@ color:white;
 text-decoration:none;
 border-radius:50px;
 font-weight:600;
+}
+
+/* LUXURY SECTION */
+
+.luxury-section{
+
+padding:100px 20px;
+background:#fff;
+text-align:center;
+}
+
+.luxury-box{
+max-width:900px;
+margin:auto;
+}
+
+.luxury-box h2{
+
+font-size:58px;
+
+font-family:
+'Playfair Display',
+serif;
+
+margin-bottom:25px;
+color:#6d4c4c;
+}
+
+.luxury-box p{
+
+font-size:22px;
+line-height:1.9;
+color:#555;
+}
+
+/* CARD PREMIUM EFFECT */
+
+.card{
+transition:0.5s ease;
+}
+
+.card:hover{
+
+transform:
+translateY(-12px)
+scale(1.02);
+
+box-shadow:
+0 30px 60px
+rgba(0,0,0,0.12);
+}
+
+/* FADE ANIMATION */
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero{
+height:500px;
+}
+
+.hero-overlay{
+padding:30px;
+}
+
+.hero h1{
+font-size:44px;
+}
+
+.hero-tagline{
+font-size:18px;
+}
+
+.luxury-box h2{
+font-size:36px;
+}
+
+.luxury-box p{
+font-size:18px;
+}
 }
