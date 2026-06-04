@@ -1,32 +1,80 @@
 const container =
 document.getElementById("dress-container");
 
-dresses.forEach(dress => {
+function renderDresses(list){
+
+container.innerHTML = "";
+
+list.forEach(dress=>{
 
 container.innerHTML += `
+
 <div class="card">
 
-<img src="${dress.image}" alt="dress">
+<img src="${dress.images[0]}">
 
 <div class="content">
 
-<h3>${dress.name}</h3>
+<h3>
+${dress.name}
+</h3>
 
-<p>${dress.description}</p>
+<p>
+${dress.description}
+</p>
 
 <div class="price">
 ${dress.price}
 </div>
 
-<button onclick="window.open('https://wa.me/918320104643?text=Hello Twiency Korat Couture, I want to order ${dress.name}')">
-Order On WhatsApp
-</button>
-
-<button onclick="window.location.href='mailto:trkorat76@gmail.com?subject=Dress Inquiry'">
-Email Inquiry
+<button onclick="window.open(
+'https://wa.me/918320104643?text=Hello, I want to order ${dress.name}'
+)">
+Order Now
 </button>
 
 </div>
 </div>
 `;
+});
+}
+
+renderDresses(dresses);
+
+document
+.getElementById("search")
+.addEventListener("input", e=>{
+
+const keyword =
+e.target.value.toLowerCase();
+
+const filtered =
+dresses.filter(d =>
+d.name.toLowerCase()
+.includes(keyword)
+);
+
+renderDresses(filtered);
+
+});
+
+document
+.getElementById("category")
+.addEventListener("change", e=>{
+
+const selected =
+e.target.value;
+
+if(selected==="All"){
+renderDresses(dresses);
+return;
+}
+
+const filtered =
+dresses.filter(d =>
+d.category === selected
+);
+
+renderDresses(filtered);
+
 });
