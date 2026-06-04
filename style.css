@@ -87,3 +87,41 @@ footer{
 text-align:center;
 padding:20px;
 }
+
+.filters{
+display:flex;
+justify-content:center;
+gap:20px;
+padding:30px;
+flex-wrap:wrap;
+}
+
+.filters input,
+.filters select{
+padding:14px;
+width:250px;
+border-radius:10px;
+border:1px solid #ddd;
+}
+
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:16px 22px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+.hero{
+background:
+linear-gradient(
+135deg,
+#f5e5e0,
+#fff7f6
+);
+}
