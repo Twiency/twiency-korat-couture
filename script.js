@@ -11,7 +11,7 @@ container.innerHTML += `
 
 <div class="card">
 
-<img src="${dress.images[0]}" alt="${dress.name}">
+<img src="${dress.images[0]}" alt="${dress.name}" onerror="this.src='dress1.jpg'">
 
 <div class="content">
 
