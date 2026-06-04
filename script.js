@@ -11,7 +11,7 @@ container.innerHTML += `
 
 <div class="card">
 
-<img src="${dress.images[0]}">
+<img src="${dress.images[0]}" alt="${dress.name}">
 
 <div class="content">
 
