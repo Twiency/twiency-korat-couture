@@ -1,127 +1,263 @@
-body{
-font-family: Arial;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap');
+
+*{
 margin:0;
-background:#fff8f6;
-color:#333;
+padding:0;
+box-sizing:border-box;
 }
 
+body{
+background:#fdf8f5;
+font-family:'Montserrat',sans-serif;
+color:#2d2d2d;
+}
+
+/* HERO SECTION */
+
 .hero{
-background:#f4e8e3;
-padding:60px;
+height:420px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
+padding:20px;
+
+background:
+linear-gradient(
+rgba(255,248,245,0.85),
+rgba(255,248,245,0.85)
+),
+url('https://images.unsplash.com/photo-1612423284934-2850a4ea6b0f?auto=format&fit=crop&w=1600&q=80');
+
+background-size:cover;
+background-position:center;
 }
 
 .hero h1{
-font-size:48px;
-color:#8b5e5e;
+font-family:
+'Cormorant Garamond',
+serif;
+
+font-size:72px;
+font-weight:700;
+
+color:#7f5858;
+margin-bottom:15px;
 }
 
 .hero p{
-font-size:20px;
+font-size:22px;
+letter-spacing:1px;
+color:#4b4b4b;
 }
 
-.collection{
-padding:50px;
-text-align:center;
-}
-
-.collection h2{
-font-size:36px;
-margin-bottom:40px;
-}
-
-.dress-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
-}
-
-.card{
-background:white;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 5px 20px rgba(0,0,0,0.12);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card img{
-width:100%;
-height:500px;
-object-fit:cover;
-}
-
-.content{
-padding:20px;
-}
-
-.price{
-font-size:28px;
-font-weight:bold;
-color:#b76e79;
-margin:10px 0;
-}
-
-button{
-width:100%;
-padding:14px;
-background:#b76e79;
-color:white;
-border:none;
-font-size:16px;
-border-radius:8px;
-cursor:pointer;
-margin-top:10px;
-}
-
-.contact{
-text-align:center;
-padding:50px;
-background:#f4e8e3;
-}
-
-footer{
-text-align:center;
-padding:20px;
-}
+/* FILTER SECTION */
 
 .filters{
 display:flex;
 justify-content:center;
+align-items:center;
 gap:20px;
-padding:30px;
+padding:40px 20px;
 flex-wrap:wrap;
+background:#fff;
 }
 
 .filters input,
 .filters select{
-padding:14px;
-width:250px;
-border-radius:10px;
+padding:16px 20px;
+border-radius:50px;
 border:1px solid #ddd;
+font-size:16px;
+width:280px;
+outline:none;
+background:#fff;
 }
+
+/* COLLECTION */
+
+.collection{
+max-width:1400px;
+margin:auto;
+padding:40px 30px 80px;
+}
+
+.dress-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(420px,1fr));
+
+gap:50px;
+}
+
+/* CARD */
+
+.card{
+background:white;
+border-radius:28px;
+overflow:hidden;
+box-shadow:
+0 15px 40px rgba(0,0,0,0.08);
+
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-12px);
+}
+
+/* IMAGE FIX */
+
+.card img{
+width:100%;
+height:750px;
+
+/* IMPORTANT FIX */
+object-fit:contain;
+
+background:#f8f8f8;
+padding:10px;
+}
+
+/* CONTENT */
+
+.content{
+padding:35px;
+text-align:center;
+}
+
+.content h3{
+font-family:
+'Cormorant Garamond',
+serif;
+
+font-size:42px;
+margin-bottom:15px;
+color:#2d2d2d;
+}
+
+.content p{
+font-size:17px;
+line-height:1.8;
+color:#666;
+margin-bottom:20px;
+}
+
+.price{
+font-size:42px;
+font-weight:700;
+color:#b67b83;
+margin-bottom:25px;
+}
+
+/* BUTTONS */
+
+button{
+width:100%;
+padding:18px;
+margin-top:15px;
+border:none;
+border-radius:50px;
+font-size:17px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:first-of-type{
+background:#b67b83;
+color:white;
+}
+
+button:first-of-type:hover{
+transform:scale(1.02);
+}
+
+button:last-of-type{
+background:#f4ece9;
+color:#7f5858;
+}
+
+/* CONTACT */
+
+.contact{
+background:#efe4df;
+padding:90px 20px;
+text-align:center;
+}
+
+.contact h2{
+font-size:52px;
+font-family:
+'Cormorant Garamond',
+serif;
+
+margin-bottom:30px;
+}
+
+.contact p{
+font-size:22px;
+margin-bottom:15px;
+}
+
+/* FOOTER */
+
+footer{
+background:#fff;
+padding:30px;
+text-align:center;
+font-size:16px;
+}
+
+/* WHATSAPP BUTTON */
 
 .whatsapp-float{
 position:fixed;
-bottom:25px;
-right:25px;
+bottom:30px;
+right:30px;
 background:#25D366;
 color:white;
-padding:16px 22px;
+padding:18px 26px;
 border-radius:50px;
 text-decoration:none;
-font-weight:bold;
-box-shadow:0 4px 12px rgba(0,0,0,0.2);
+font-size:18px;
+font-weight:600;
+box-shadow:
+0 10px 30px rgba(0,0,0,0.2);
+
+z-index:999;
 }
 
+/* MOBILE */
+
+@media(max-width:768px){
+
 .hero{
-background:
-linear-gradient(
-135deg,
-#f5e5e0,
-#fff7f6
-);
+height:320px;
+}
+
+.hero h1{
+font-size:44px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.dress-grid{
+grid-template-columns:1fr;
+}
+
+.card img{
+height:500px;
+}
+
+.content h3{
+font-size:32px;
+}
+
+.price{
+font-size:32px;
+}
 }
