@@ -1,188 +1,41 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Twiency Korat Couture</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twiency Korat Couture</title>
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family: Arial, sans-serif;
-}
-
-body{
-background:#fffaf8;
-color:#333;
-}
-
-header{
-background:#f4e8e3;
-padding:40px;
-text-align:center;
-}
-
-header h1{
-font-size:42px;
-color:#7d4f50;
-}
-
-header p{
-margin-top:10px;
-font-size:18px;
-}
-
-.hero{
-padding:50px 20px;
-text-align:center;
-}
-
-.hero h2{
-font-size:36px;
-margin-bottom:15px;
-}
-
-.products{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-padding:40px;
-}
-
-.card{
-background:white;
-width:350px;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 4px 20px rgba(0,0,0,0.1);
-}
-
-.card img{
-width:100%;
-height:500px;
-object-fit:cover;
-}
-
-.card-content{
-padding:20px;
-}
-
-.card h3{
-font-size:24px;
-margin-bottom:10px;
-}
-
-.price{
-font-size:26px;
-font-weight:bold;
-color:#b76e79;
-margin:10px 0;
-}
-
-button{
-background:#b76e79;
-color:white;
-padding:12px 20px;
-border:none;
-border-radius:8px;
-cursor:pointer;
-font-size:16px;
-width:100%;
-}
-
-button:hover{
-opacity:0.9;
-}
-
-footer{
-background:#f4e8e3;
-padding:30px;
-text-align:center;
-margin-top:50px;
-}
-
-.contact{
-margin-top:15px;
-font-size:18px;
-}
-
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-<h1>Twiency Korat Couture</h1>
-<p>Luxury Ethnic Wear • Timeless Elegance</p>
+<header class="hero">
+    <h1>Twiency Korat Couture</h1>
+    <p>Luxury Ethnic Wear • Timeless Elegance</p>
 </header>
 
-<section class="hero">
-<h2>Exclusive Designer Collection</h2>
-<p>Crafted for elegance, luxury, and unforgettable moments.</p>
+<section class="collection">
+    <h2>Exclusive Collection</h2>
+
+    <div id="dress-container" class="dress-grid"></div>
 </section>
 
-<section class="products">
+<section class="contact">
 
-<div class="card">
-<img src="dress1.jpg" alt="Celeste Rose Lehenga">
+    <h2>Contact Us</h2>
 
-<div class="card-content">
-<h3>Celeste Rose Lehenga</h3>
-
-<p>
-A luxurious rose-toned couture lehenga featuring a sculpted embellished blouse, shimmering skirt, and elegant drape styling.
-</p>
-
-<div class="price">₹20,000</div>
-
-<button onclick="window.location.href='mailto:trkorat76@gmail.com?subject=Dress Order Inquiry'">
-Order Now
-</button>
-</div>
-</div>
-
-<div class="card">
-<img src="dress2.jpg" alt="Ivory Pearl Couture Lehenga">
-
-<div class="card-content">
-<h3>Ivory Pearl Couture Lehenga</h3>
-
-<p>
-A timeless ivory masterpiece crafted with intricate embroidery and shimmering embellishments for luxury occasions.
-</p>
-
-<div class="price">₹20,000</div>
-
-<button onclick="window.location.href='mailto:trkorat76@gmail.com?subject=Dress Order Inquiry'">
-Order Now
-</button>
-</div>
-</div>
+    <p>📞 8320104643</p>
+    <p>✉️ trkorat76@gmail.com</p>
 
 </section>
 
 <footer>
-<h2>Contact Us</h2>
-
-<div class="contact">
-📞 Phone: 8320104643
-</div>
-
-<div class="contact">
-✉️ Email: trkorat76@gmail.com
-</div>
-
-<p style="margin-top:20px;">
-© 2026 Twiency Korat Couture
-</p>
-
+    <p>© 2026 Twiency Korat Couture</p>
 </footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
-```
