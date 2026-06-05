@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap');
 
 *{
 margin:0;
@@ -6,16 +6,60 @@ padding:0;
 box-sizing:border-box;
 }
 
-body{
-background:#fdf8f5;
-font-family:'Montserrat',sans-serif;
-color:#2d2d2d;
+html{
+scroll-behavior:smooth;
 }
 
-/* HERO SECTION */
+body{
+font-family:'Inter',sans-serif;
+background:#faf7f5;
+color:#2b2b2b;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:9999;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:22px 60px;
+
+background:
+rgba(255,255,255,0.92);
+
+backdrop-filter:blur(12px);
+
+box-shadow:
+0 5px 20px rgba(0,0,0,0.05);
+}
+
+.logo{
+font-size:28px;
+font-family:'Playfair Display',serif;
+font-weight:700;
+color:#6d4c4c;
+}
+
+.navbar ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+.navbar a{
+text-decoration:none;
+color:#444;
+font-weight:500;
+}
+
+/* HERO */
 
 .hero{
-
 height:700px;
 
 background:
@@ -32,139 +76,131 @@ display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
 }
 
 .hero-overlay{
-
-backdrop-filter:blur(4px);
-
 background:
-rgba(255,255,255,0.12);
+rgba(255,255,255,0.15);
 
 padding:60px;
-
 border-radius:30px;
-
-animation:fadeIn 1.4s ease;
+backdrop-filter:blur(5px);
 }
 
 .hero-small{
-
 letter-spacing:4px;
-text-transform:uppercase;
-font-size:15px;
+font-size:14px;
 margin-bottom:20px;
-color:#694747;
 }
 
 .hero h1{
-
 font-size:88px;
-font-family:
-'Playfair Display',
-serif;
-
+font-family:'Playfair Display',serif;
 color:#6d4c4c;
-margin-bottom:15px;
 }
 
 .hero-tagline{
 font-size:24px;
-margin-bottom:35px;
+margin:20px 0;
 }
 
 .shop-btn{
-
 display:inline-block;
-
 padding:18px 45px;
-
 background:#b67b83;
 color:white;
-
-border-radius:50px;
 text-decoration:none;
-
-font-size:18px;
-font-weight:600;
-
-transition:0.3s;
+border-radius:50px;
 }
 
-.shop-btn:hover{
-transform:translateY(-3px);
-}
-
-/* FILTER SECTION */
+/* FILTERS */
 
 .filters{
 display:flex;
 justify-content:center;
-align-items:center;
 gap:20px;
-padding:40px 20px;
+padding:40px;
+background:white;
 flex-wrap:wrap;
-background:#fff;
 }
 
 .filters input,
 .filters select{
-padding:16px 20px;
+padding:18px;
 border-radius:50px;
 border:1px solid #ddd;
-font-size:16px;
 width:280px;
-outline:none;
-background:#fff;
 }
 
-/* COLLECTION */
+/* SECTIONS */
+
+.luxury-section,
+.about-section,
+.contact{
+padding:100px 20px;
+text-align:center;
+}
+
+.luxury-box,
+.about-content{
+max-width:900px;
+margin:auto;
+}
+
+.luxury-box h2,
+.about-content h2,
+.contact h2{
+font-size:58px;
+font-family:'Playfair Display',serif;
+color:#6d4c4c;
+margin-bottom:25px;
+}
+
+.luxury-box p,
+.about-content p,
+.contact p{
+font-size:22px;
+line-height:1.8;
+}
+
+/* PRODUCTS */
 
 .collection{
 max-width:1400px;
 margin:auto;
-padding:40px 30px 80px;
+padding:50px;
 }
 
 .dress-grid{
 display:grid;
 grid-template-columns:
-repeat(auto-fit,minmax(420px,1fr));
-
-gap:50px;
+repeat(auto-fit,minmax(450px,1fr));
+gap:40px;
 }
-
-/* CARD */
 
 .card{
 background:white;
-border-radius:28px;
+border-radius:30px;
 overflow:hidden;
 box-shadow:
 0 15px 40px rgba(0,0,0,0.08);
 
-transition:0.3s;
+transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-12px);
+transform:
+translateY(-10px)
+scale(1.02);
 }
-
-/* IMAGE FIX */
 
 .card img{
 width:100%;
-height:750px;
-
-/* IMPORTANT FIX */
+height:700px;
 object-fit:contain;
-
-background:#f8f8f8;
-padding:10px;
+background:#f7f3f2;
+cursor:pointer;
 }
-
-/* CONTENT */
 
 .content{
 padding:35px;
@@ -172,149 +208,31 @@ text-align:center;
 }
 
 .content h3{
-font-family:
-'Cormorant Garamond',
-serif;
-
+font-family:'Playfair Display',serif;
 font-size:42px;
-margin-bottom:15px;
-color:#2d2d2d;
 }
 
 .content p{
-font-size:17px;
-line-height:1.8;
-color:#666;
-margin-bottom:20px;
+margin:20px 0;
+font-size:18px;
 }
 
 .price{
 font-size:42px;
 font-weight:700;
 color:#b67b83;
-margin-bottom:25px;
+margin-bottom:20px;
 }
-
-/* BUTTONS */
 
 button{
 width:100%;
 padding:18px;
-margin-top:15px;
 border:none;
 border-radius:50px;
-font-size:17px;
-font-weight:600;
-cursor:pointer;
-transition:0.3s;
-}
-
-button:first-of-type{
 background:#b67b83;
 color:white;
-}
-
-button:first-of-type:hover{
-transform:scale(1.02);
-}
-
-button:last-of-type{
-background:#f4ece9;
-color:#7f5858;
-}
-
-/* CONTACT */
-
-.contact{
-background:#efe4df;
-padding:90px 20px;
-text-align:center;
-}
-
-.contact h2{
-font-size:52px;
-font-family:
-'Cormorant Garamond',
-serif;
-
-margin-bottom:30px;
-}
-
-.contact p{
-font-size:22px;
-margin-bottom:15px;
-}
-
-/* FOOTER */
-
-footer{
-background:#fff;
-padding:30px;
-text-align:center;
-font-size:16px;
-}
-
-/* WHATSAPP BUTTON */
-
-.whatsapp-float{
-position:fixed;
-bottom:30px;
-right:30px;
-background:#25D366;
-color:white;
-padding:18px 26px;
-border-radius:50px;
-text-decoration:none;
 font-size:18px;
-font-weight:600;
-box-shadow:
-0 10px 30px rgba(0,0,0,0.2);
-
-z-index:999;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.hero{
-height:320px;
-}
-
-.hero h1{
-font-size:44px;
-}
-
-.hero p{
-font-size:18px;
-}
-
-.dress-grid{
-grid-template-columns:1fr;
-}
-
-.card img{
-height:500px;
-}
-
-.content h3{
-font-size:32px;
-}
-
-.price{
-font-size:32px;
-}
-} 
-
-/* IMAGE ZOOM */
-
-.card img{
 cursor:pointer;
-transition:0.4s;
-}
-
-.card img:hover{
-transform:scale(1.03);
 }
 
 /* MODAL */
@@ -326,24 +244,20 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-
 background:
-rgba(0,0,0,0.75);
+rgba(0,0,0,0.8);
 
 justify-content:center;
 align-items:center;
-
 z-index:99999;
 }
 
 .modal-box{
-
 background:white;
-width:90%;
-max-width:700px;
-
-border-radius:30px;
 padding:30px;
+border-radius:30px;
+max-width:700px;
+width:90%;
 text-align:center;
 position:relative;
 }
@@ -352,135 +266,93 @@ position:relative;
 width:100%;
 max-height:500px;
 object-fit:contain;
-border-radius:20px;
-margin-bottom:20px;
 }
 
 .close{
 position:absolute;
 right:25px;
-top:20px;
+top:15px;
 font-size:32px;
 cursor:pointer;
 }
 
-.modal-box h2{
-font-size:38px;
-margin-bottom:10px;
-}
-
-.modal-box h3{
-font-size:32px;
-color:#b67b83;
-margin-bottom:15px;
-}
-
-.modal-box p{
-font-size:18px;
-line-height:1.7;
-margin-bottom:25px;
-}
-
 .modal-btn{
 display:inline-block;
+margin-top:20px;
 padding:18px 40px;
 background:#b67b83;
 color:white;
-text-decoration:none;
 border-radius:50px;
-font-weight:600;
+text-decoration:none;
 }
 
-/* LUXURY SECTION */
+/* WHATSAPP */
 
-.luxury-section{
+.whatsapp-float{
+position:fixed;
+right:30px;
+bottom:30px;
+width:80px;
+height:80px;
+background:#25D366;
+border-radius:50%;
 
-padding:100px 20px;
-background:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-decoration:none;
+z-index:99999;
+}
+
+.whatsapp-float::before{
+content:'💬';
+font-size:36px;
+}
+
+footer{
+padding:30px;
 text-align:center;
-}
-
-.luxury-box{
-max-width:900px;
-margin:auto;
-}
-
-.luxury-box h2{
-
-font-size:58px;
-
-font-family:
-'Playfair Display',
-serif;
-
-margin-bottom:25px;
-color:#6d4c4c;
-}
-
-.luxury-box p{
-
-font-size:22px;
-line-height:1.9;
-color:#555;
-}
-
-/* CARD PREMIUM EFFECT */
-
-.card{
-transition:0.5s ease;
-}
-
-.card:hover{
-
-transform:
-translateY(-12px)
-scale(1.02);
-
-box-shadow:
-0 30px 60px
-rgba(0,0,0,0.12);
-}
-
-/* FADE ANIMATION */
-
-@keyframes fadeIn{
-
-from{
-opacity:0;
-transform:translateY(30px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
+background:white;
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
 
+.navbar{
+flex-direction:column;
+padding:20px;
+}
+
 .hero{
 height:500px;
+padding:20px;
+}
+
+.hero h1{
+font-size:42px;
 }
 
 .hero-overlay{
 padding:30px;
 }
 
-.hero h1{
-font-size:44px;
+.dress-grid{
+grid-template-columns:1fr;
 }
 
-.hero-tagline{
-font-size:18px;
+.card img{
+height:450px;
 }
 
-.luxury-box h2{
+.content h3{
+font-size:32px;
+}
+
+.luxury-box h2,
+.about-content h2,
+.contact h2{
 font-size:36px;
-}
-
-.luxury-box p{
-font-size:18px;
 }
 }
