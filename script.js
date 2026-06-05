@@ -1,9 +1,33 @@
 const container =
-document.getElementById("dress-container");
+document.getElementById(
+"dress-container"
+);
+
+/* RENDER DRESSES */
 
 function renderDresses(list){
 
 container.innerHTML = "";
+
+if(list.length === 0){
+
+container.innerHTML = `
+
+<div style="
+text-align:center;
+grid-column:1/-1;
+padding:80px 20px;
+font-size:24px;
+color:#666;
+">
+
+No dresses found.
+
+</div>
+`;
+
+return;
+}
 
 list.forEach(dress => {
 
@@ -20,31 +44,41 @@ onclick="openModal(
 '${dress.name}',
 '${dress.price}',
 '${dress.description}'
-)">
+)"
+
+onerror="this.src='dresses/dress1.jpg'">
 
 <div class="content">
 
-<h3>${dress.name}</h3>
+<h3>
+${dress.name}
+</h3>
 
-<p>${dress.description}</p>
+<p>
+${dress.description}
+</p>
 
 <div class="price">
 ${dress.price}
 </div>
 
-<button onclick="window.open(
-'https://wa.me/918320104643?text=Hello Twiency Korat Couture,%0A%0AI am interested in:%0A${dress.name}%0A%0APlease share availability.'
+<button onclick="orderNow(
+'${dress.name}'
 )">
 Order On WhatsApp
 </button>
 
 </div>
+
 </div>
+
 `;
 
 });
 
 }
+
+/* INITIAL LOAD */
 
 renderDresses(dresses);
 
@@ -52,43 +86,55 @@ renderDresses(dresses);
 
 document
 .getElementById("search")
-.addEventListener("input", e=>{
+.addEventListener("input", function(e){
 
 const keyword =
-e.target.value.toLowerCase();
+e.target.value
+.toLowerCase()
+.trim();
 
 const filtered =
-dresses.filter(d =>
-d.name.toLowerCase()
+dresses.filter(dress =>
+
+dress.name
+.toLowerCase()
 .includes(keyword)
+
 );
 
 renderDresses(filtered);
 
 });
 
-/* CATEGORY */
+/* CATEGORY FILTER */
 
 document
 .getElementById("category")
-.addEventListener("change", e=>{
+.addEventListener("change", function(e){
 
 const selected =
 e.target.value;
 
-if(selected==="All Categories"){
+if(selected ===
+"All Categories"){
+
 renderDresses(dresses);
 return;
 }
 
 const filtered =
-dresses.filter(d =>
-d.category===selected
+dresses.filter(dress =>
+
+dress.category ===
+selected
+
 );
 
 renderDresses(filtered);
 
 });
+
+/* OPEN MODAL */
 
 function openModal(
 image,
@@ -99,22 +145,77 @@ description
 
 document
 .getElementById("modal")
-.style.display="flex";
+.style.display =
+"flex";
 
 document
 .getElementById("modal-img")
-.src=image;
+.src = image;
 
 document
 .getElementById("modal-title")
-.innerText=name;
+.innerText = name;
 
 document
 .getElementById("modal-price")
-.innerText=price;
+.innerText = price;
 
 document
 .getElementById("modal-description")
-.innerText=description;
+.innerText =
+description;
+
+/* MODAL WHATSAPP */
+
+document
+.getElementById(
+"modal-whatsapp"
+)
+.href =
+
+`https://wa.me/918320104643?text=
+Hello%20Twiency%20Korat%20Couture,%0A%0A
+I%20am%20interested%20in:%0A
+${encodeURIComponent(name)}%0A%0A
+Please%20share%20availability,%20size%20details%20and%20more%20information.
+`;
+
+}
+
+/* CLOSE MODAL */
+
+window.onclick =
+function(event){
+
+const modal =
+document.getElementById(
+"modal"
+);
+
+if(event.target === modal){
+
+modal.style.display =
+"none";
+}
+
+}
+
+/* ORDER NOW */
+
+function orderNow(
+dressName
+){
+
+window.open(
+
+`https://wa.me/918320104643?text=
+Hello%20Twiency%20Korat%20Couture,%0A%0A
+I%20am%20interested%20in:%0A
+${encodeURIComponent(dressName)}%0A%0A
+Please%20share%20availability,%20size%20details%20and%20more%20information.`,
+
+"_blank"
+
+);
 
 }
