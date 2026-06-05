@@ -4,21 +4,69 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport"
-content="width=device-width, initial-scale=1">
+content="width=device-width, initial-scale=1.0">
 
 <title>
 Twiency Korat Couture
 </title>
 
-<meta name="description"
+<meta
+name="description"
 content="Luxury ethnic couture and premium designer dresses.">
 
-<link rel="stylesheet"
+<link
+rel="stylesheet"
 href="style.css">
 
 </head>
 
 <body>
+
+<nav class="navbar">
+
+<div class="logo">
+Twiency Korat Couture
+</div>
+
+<ul>
+
+<li>
+<a href="#">
+Home
+</a>
+</li>
+
+<li>
+<a href="#dress-container">
+Collection
+</a>
+</li>
+
+<li>
+<a href="#about">
+About
+</a>
+</li>
+
+<li>
+<a href="#contact">
+Contact
+</a>
+</li>
+
+<li>
+<a
+href="https://wa.me/918320104643"
+target="_blank">
+
+WhatsApp
+
+</a>
+</li>
+
+</ul>
+
+</nav>
 
 <header class="hero">
 
@@ -36,7 +84,8 @@ Twiency Korat Couture
 Crafted for Elegant Celebrations
 </p>
 
-<a href="#dress-container"
+<a
+href="#dress-container"
 class="shop-btn">
 
 Explore Collection
@@ -56,19 +105,19 @@ placeholder="Search Dress">
 
 <select id="category">
 
-<option value="All">
+<option>
 All Categories
 </option>
 
-<option value="Bridal">
+<option>
 Bridal
 </option>
 
-<option value="Reception">
+<option>
 Reception
 </option>
 
-<option value="Party Wear">
+<option>
 Party Wear
 </option>
 
@@ -92,6 +141,8 @@ Discover handcrafted couture lehengas designed for timeless elegance, celebratio
 
 </section>
 
+<section class="collection">
+
 <div
 id="dress-container"
 class="dress-grid">
@@ -100,16 +151,32 @@ class="dress-grid">
 
 </section>
 
-<a
-class="whatsapp-float"
-href="https://wa.me/918320104643"
-target="_blank">
+<section
+id="about"
+class="about-section">
 
-WhatsApp
+<div class="about-content">
 
-</a>
+<h2>
+About Twiency Korat Couture
+</h2>
 
-<section class="contact">
+<p>
+At Twiency Korat Couture,
+we believe elegance is timeless.
+
+Every couture piece is carefully selected for women who appreciate sophistication, luxury, and celebration-worthy fashion.
+
+From bridal elegance to statement occasion wear, our collections are designed to make every moment unforgettable.
+</p>
+
+</div>
+
+</section>
+
+<section
+id="contact"
+class="contact">
 
 <h2>Contact</h2>
 
@@ -127,10 +194,11 @@ WhatsApp
 © 2026 Twiency Korat Couture
 </footer>
 
-<script src="data.js"></script>
-<script src="script.js"></script>
-
-<!-- DRESS MODAL -->
+<a
+class="whatsapp-float"
+href="https://wa.me/918320104643"
+target="_blank">
+</a>
 
 <div id="modal" class="modal">
 
@@ -144,8 +212,7 @@ onclick="document.getElementById('modal').style.display='none'">
 
 </span>
 
-<img
-id="modal-img">
+<img id="modal-img">
 
 <h2 id="modal-title"></h2>
 
@@ -165,6 +232,9 @@ Order On WhatsApp
 </div>
 
 </div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
