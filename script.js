@@ -14,6 +14,7 @@ container.innerHTML += `
 <img
 src="${dress.images[0]}"
 alt="${dress.name}"
+
 onclick="openModal(
 '${dress.images[0]}',
 '${dress.name}',
@@ -32,14 +33,13 @@ ${dress.price}
 </div>
 
 <button onclick="window.open(
-'https://wa.me/918320104643?text=Hi Twiency Korat Couture,%0A%0AI am interested in:%0A${dress.name}%0A%0APlease share availability.'
+'https://wa.me/918320104643?text=Hello Twiency Korat Couture,%0A%0AI am interested in:%0A${dress.name}%0A%0APlease share availability.'
 )">
 Order On WhatsApp
 </button>
 
 </div>
 </div>
-
 `;
 
 });
@@ -90,8 +90,6 @@ renderDresses(filtered);
 
 });
 
-/* MODAL */
-
 function openModal(
 image,
 name,
@@ -99,24 +97,24 @@ price,
 description
 ){
 
-document.getElementById(
-"modal"
-).style.display="flex";
+document
+.getElementById("modal")
+.style.display="flex";
 
-document.getElementById(
-"modal-img"
-).src=image;
+document
+.getElementById("modal-img")
+.src=image;
 
-document.getElementById(
-"modal-title"
-).innerText=name;
+document
+.getElementById("modal-title")
+.innerText=name;
 
-document.getElementById(
-"modal-price"
-).innerText=price;
+document
+.getElementById("modal-price")
+.innerText=price;
 
-document.getElementById(
-"modal-description"
-).innerText=description;
+document
+.getElementById("modal-description")
+.innerText=description;
 
 }
