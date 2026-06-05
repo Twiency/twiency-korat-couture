@@ -1,9 +1,16 @@
 const dresses = [
 
+/* DRESS 1 */
+
 {
-name: "Celeste Rose Lehenga",
-category: "Reception",
-price: "₹20,000",
+name:
+"Celeste Rose Lehenga",
+
+category:
+"Reception",
+
+price:
+"₹20,000",
 
 description:
 "Luxury rose-toned couture lehenga crafted for elegant celebrations.",
@@ -13,10 +20,17 @@ images: [
 ]
 },
 
+/* DRESS 2 */
+
 {
-name: "Ivory Pearl Couture Lehenga",
-category: "Bridal",
-price: "₹20,000",
+name:
+"Ivory Pearl Couture Lehenga",
+
+category:
+"Bridal",
+
+price:
+"₹20,000",
 
 description:
 "Elegant ivory couture lehenga with premium embroidery and regal styling.",
