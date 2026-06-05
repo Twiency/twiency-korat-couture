@@ -30,7 +30,9 @@ align-items:center;
 
 padding:22px 60px;
 
-background:rgba(255,255,255,0.95);
+background:
+rgba(255,255,255,0.96);
+
 backdrop-filter:blur(10px);
 
 box-shadow:
@@ -42,7 +44,7 @@ font-family:
 'Playfair Display',
 serif;
 
-font-size:32px;
+font-size:30px;
 font-weight:700;
 color:#6d4c4c;
 }
@@ -67,11 +69,11 @@ color:#b67b83;
 /* HERO */
 
 .hero{
-height:700px;
+height:720px;
 
 background:
 linear-gradient(
-rgba(248,240,236,0.65),
+rgba(248,240,236,0.60),
 rgba(248,240,236,0.72)
 ),
 url('https://images.unsplash.com/photo-1594736797933-d0c8f31e87de?q=80&w=1800');
@@ -82,8 +84,8 @@ background-position:center;
 display:flex;
 justify-content:center;
 align-items:center;
-text-align:center;
 
+text-align:center;
 padding:20px;
 }
 
@@ -91,10 +93,10 @@ padding:20px;
 background:
 rgba(255,255,255,0.15);
 
-padding:60px;
+padding:65px;
 border-radius:35px;
 
-backdrop-filter:blur(5px);
+backdrop-filter:blur(6px);
 
 max-width:900px;
 width:100%;
@@ -113,24 +115,37 @@ font-family:
 'Playfair Display',
 serif;
 
-font-size:82px;
+font-size:84px;
 color:#6d4c4c;
-margin-bottom:20px;
+margin-bottom:15px;
 }
 
 .hero-tagline{
-font-size:24px;
+font-size:26px;
+margin-bottom:12px;
+font-weight:500;
+}
+
+.hero-subtitle{
+font-size:18px;
 margin-bottom:35px;
+color:#555;
 }
 
 .shop-btn{
 display:inline-block;
-padding:18px 45px;
+
+padding:18px 48px;
+
 background:#b67b83;
 color:white;
+
 text-decoration:none;
 border-radius:50px;
+
 font-weight:600;
+font-size:18px;
+
 transition:0.3s;
 }
 
@@ -138,7 +153,7 @@ transition:0.3s;
 transform:translateY(-3px);
 }
 
-/* FILTER */
+/* FILTERS */
 
 .filters{
 display:flex;
@@ -159,21 +174,27 @@ font-size:16px;
 outline:none;
 }
 
-/* SECTION */
+/* SECTIONS */
 
-.luxury-section{
-padding:100px 20px;
+.luxury-section,
+.about-section,
+.instagram-section,
+.contact{
+padding:110px 20px;
 text-align:center;
-background:#fff;
 }
 
-.luxury-box{
-max-width:900px;
+.luxury-box,
+.about-content{
+max-width:950px;
 margin:auto;
 }
 
-.luxury-box h2{
-font-size:60px;
+.luxury-box h2,
+.about-content h2,
+.instagram-section h2,
+.contact h2{
+font-size:56px;
 font-family:
 'Playfair Display',
 serif;
@@ -182,27 +203,33 @@ margin-bottom:25px;
 color:#6d4c4c;
 }
 
-.luxury-box p{
+.luxury-box p,
+.about-content p,
+.instagram-section p,
+.contact p{
 font-size:22px;
 line-height:1.9;
 color:#555;
 }
 
-/* PRODUCTS */
+/* COLLECTION */
 
 .collection{
-max-width:1400px;
+max-width:1450px;
 margin:auto;
 padding:70px 30px;
 }
 
 .dress-grid{
 display:grid;
+
 grid-template-columns:
 repeat(auto-fit,minmax(420px,1fr));
 
 gap:40px;
 }
+
+/* PRODUCT CARD */
 
 .card{
 background:white;
@@ -226,8 +253,8 @@ width:100%;
 height:700px;
 object-fit:contain;
 background:#f7f3f2;
+padding:12px;
 cursor:pointer;
-padding:10px;
 }
 
 .content{
@@ -240,7 +267,7 @@ font-family:
 'Playfair Display',
 serif;
 
-font-size:44px;
+font-size:42px;
 margin-bottom:15px;
 }
 
@@ -248,11 +275,11 @@ margin-bottom:15px;
 font-size:18px;
 line-height:1.8;
 color:#555;
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
 .price{
-font-size:46px;
+font-size:42px;
 font-weight:700;
 color:#b67b83;
 margin-bottom:25px;
@@ -263,70 +290,74 @@ width:100%;
 padding:18px;
 border:none;
 border-radius:50px;
+
 background:#b67b83;
 color:white;
+
 font-size:18px;
 font-weight:600;
+
 cursor:pointer;
+transition:0.3s;
 }
 
-/* ABOUT */
-
-.about-section{
-padding:120px 20px;
-background:#fff;
-text-align:center;
+button:hover{
+opacity:0.92;
 }
 
-.about-content{
-max-width:950px;
-margin:auto;
-}
+/* INSTAGRAM */
 
-.about-content h2{
-font-size:56px;
-font-family:
-'Playfair Display',
-serif;
+.instagram-placeholder{
+margin-top:30px;
+width:280px;
+height:280px;
 
-margin-bottom:30px;
+background:#f1e7e4;
+border-radius:25px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:24px;
+font-weight:600;
+
+margin-left:auto;
+margin-right:auto;
+
 color:#6d4c4c;
-}
-
-.about-content p{
-font-size:22px;
-line-height:2;
-color:#555;
 }
 
 /* CONTACT */
 
 .contact{
-padding:100px 20px;
 background:#efe4df;
-text-align:center;
 }
 
-.contact h2{
-font-size:56px;
-font-family:
-'Playfair Display',
-serif;
-
-margin-bottom:30px;
-}
-
-.contact p{
-font-size:22px;
-margin-bottom:16px;
+.contact-note{
+margin-top:25px;
+font-size:18px !important;
 }
 
 /* FOOTER */
 
 footer{
-padding:35px;
-text-align:center;
 background:white;
+padding:50px 20px;
+text-align:center;
+}
+
+.footer-content h3{
+font-family:
+'Playfair Display',
+serif;
+
+font-size:32px;
+margin-bottom:12px;
+}
+
+.footer-content p{
+margin-bottom:10px;
 }
 
 /* MODAL */
@@ -334,8 +365,10 @@ background:white;
 .modal{
 display:none;
 position:fixed;
+
 top:0;
 left:0;
+
 width:100%;
 height:100%;
 
@@ -346,14 +379,17 @@ justify-content:center;
 align-items:center;
 
 z-index:99999;
+padding:20px;
 }
 
 .modal-box{
 background:white;
-padding:30px;
-border-radius:30px;
+padding:35px;
+border-radius:35px;
+
 width:90%;
 max-width:700px;
+
 text-align:center;
 position:relative;
 }
@@ -373,14 +409,37 @@ font-size:34px;
 cursor:pointer;
 }
 
+.modal-box h2{
+font-family:
+'Playfair Display',
+serif;
+
+font-size:42px;
+margin-bottom:12px;
+}
+
+.modal-box h3{
+font-size:34px;
+color:#b67b83;
+margin-bottom:18px;
+}
+
+.modal-box p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:25px;
+}
+
 .modal-btn{
 display:inline-block;
-margin-top:20px;
-padding:18px 40px;
+padding:18px 42px;
+
 background:#b67b83;
 color:white;
+
 border-radius:50px;
 text-decoration:none;
+font-weight:600;
 }
 
 /* WHATSAPP */
@@ -401,15 +460,16 @@ justify-content:center;
 align-items:center;
 
 text-decoration:none;
-z-index:99999;
 
 box-shadow:
-0 8px 25px rgba(0,0,0,0.2);
+0 10px 25px rgba(0,0,0,0.18);
+
+z-index:99999;
 }
 
 .whatsapp-float::before{
 content:'💬';
-font-size:36px;
+font-size:34px;
 }
 
 /* MOBILE */
@@ -425,15 +485,16 @@ gap:15px;
 .navbar ul{
 flex-wrap:wrap;
 justify-content:center;
-gap:16px;
+gap:18px;
 }
 
 .logo{
 font-size:24px;
+text-align:center;
 }
 
 .hero{
-height:500px;
+height:520px;
 }
 
 .hero-overlay{
@@ -445,7 +506,11 @@ font-size:44px;
 }
 
 .hero-tagline{
-font-size:18px;
+font-size:20px;
+}
+
+.hero-subtitle{
+font-size:16px;
 }
 
 .dress-grid{
@@ -453,7 +518,7 @@ grid-template-columns:1fr;
 }
 
 .card img{
-height:500px;
+height:480px;
 }
 
 .content h3{
@@ -462,13 +527,20 @@ font-size:34px;
 
 .luxury-box h2,
 .about-content h2,
+.instagram-section h2,
 .contact h2{
-font-size:38px;
+font-size:36px;
 }
 
 .luxury-box p,
 .about-content p,
+.instagram-section p,
 .contact p{
 font-size:18px;
+}
+
+.whatsapp-float{
+width:65px;
+height:65px;
 }
 }
